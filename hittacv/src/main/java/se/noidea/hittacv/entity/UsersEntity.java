@@ -1,10 +1,12 @@
 package se.noidea.hittacv.entity;
 
 import jakarta.persistence.*;
+import lombok.ToString;
 
 import java.sql.Timestamp;
 
 @Entity
+@ToString
 @Table(name = "users", schema = "screenwork_se_synos", catalog = "")
 public class UsersEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)

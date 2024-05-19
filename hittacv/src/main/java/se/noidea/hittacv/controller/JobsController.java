@@ -9,17 +9,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import se.noidea.hittacv.entity.JobsEntity;
 import se.noidea.hittacv.services.JobService;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/api/v1/jobs")
 public class JobsController {
     private static final Logger logger = LogManager.getLogger(JobsController.class);
 
-    private JobService jobService;
+    private final JobService jobService;
 
     @Autowired
     public JobsController(JobService jobService) {
